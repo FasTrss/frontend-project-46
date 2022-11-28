@@ -49,13 +49,13 @@ const getFormattedDiff = (diffData) => {
         const typeofDiff = diff.type;
         switch (typeofDiff) {
             case 'changed': 
-                return `- ${diff.key}:${diff.value1} \n+ ${diff.key}:${diff.value2}`;
+                return ` - ${diff.key}:${diff.value1} \n + ${diff.key}:${diff.value2}`;
             case 'removed':
-                return `- ${diff.key}:${diff.value}`;
+                return ` - ${diff.key}:${diff.value}`;
             case 'added': 
-                return `+ ${diff.key}:${diff.value}`;
+                return ` + ${diff.key}:${diff.value}`;
             case 'unchanged':
-                return `  ${diff.key}:${diff.value}`;
+                return `   ${diff.key}:${diff.value}`;
             default: 
                 return null;
         }

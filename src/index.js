@@ -68,6 +68,7 @@ const genDiff = (filepath1, filepath2) => {
     return getFormattedDiff(data);
 }
 
+// eslint-disable-next-line no-undef
 const getAbsolutePath = (filepath) => path.resolve(process.cwd(), filepath);
 const readFile = (filepath) => fs.readFileSync(getAbsolutePath(filepath), 'utf-8');
 const getObject = (filepath) => JSON.parse(readFile(filepath));

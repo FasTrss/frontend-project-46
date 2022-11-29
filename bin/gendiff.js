@@ -12,6 +12,4 @@ program
 
   program.parse();
   
-  const options = program.opts();
-  const help = options.help;
 export default program;

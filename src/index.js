@@ -1,6 +1,11 @@
 import _ from 'lodash';
 import path from 'path';
 import fs from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+export const __dirname = dirname(__filename);
 
 const genDiffData = (filepath1, filepath2) => {
    const obj1 = getObject(filepath1);
@@ -69,8 +74,10 @@ const genDiff = (filepath1, filepath2) => {
 }
 
 // eslint-disable-next-line no-undef
-const getAbsolutePath = (filepath) => path.resolve(process.cwd(), filepath);
-const readFile = (filepath) => fs.readFileSync(getAbsolutePath(filepath), 'utf-8');
-const getObject = (filepath) => JSON.parse(readFile(filepath));
+export const getAbsolutePath = (filepath) => path.resolve(__dirname, '..', '__fixtures__', filepath);
+export const readFile = (filepath) => fs.readFileSync(getAbsolutePath(filepath), 'utf-8');
+export const getObject = (filepath) => JSON.parse(readFile(filepath));
+
+genDiff('file1.JSON', 'file2.JSON');
 
 export default genDiff;

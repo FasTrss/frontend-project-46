@@ -1,17 +1,15 @@
 import _ from 'lodash';
-import path, { dirname } from 'path';
+import path from 'path';
 import fs from 'fs';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-export const __dirname = dirname(__filename);
-
-export const getData = (filepath) => fs.readFileSync(path.resolve(process.cwd(), '__fixtures__', filepath), 'utf-8');
-export const getObject = (filepath) => JSON.parse(getData(filepath));
+export const getData = (filepath) => fs.readFileSync(path.resolve(process.cwd(), '__fixtures__', filepath), 'utf8');
+export const getObject = (filepath) => JSON.parse(filepath);
 
 const genDiffData = (filepath1, filepath2) => {
-  const obj1 = getObject(filepath1);
-  const obj2 = getObject(filepath2);
+  const file1 = getData(filepath1);
+  const file2 = getData(filepath2);
+  const obj1 = getObject(file1);
+  const obj2 = getObject(file2);
   const keys1 = Object.keys(obj1);
   const keys2 = Object.keys(obj2);
   const uniq = _.uniq([...keys1, ...keys2]);

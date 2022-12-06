@@ -5,9 +5,9 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 export const __dirname = dirname(__filename);
-export const getAbsolutePath = (filepath) => path.resolve(__dirname, '..', '__fixtures__', filepath);
-export const readFile = (filepath) => fs.readFileSync(getAbsolutePath(filepath), 'utf-8');
-export const getObject = (filepath) => JSON.parse(readFile(filepath));
+
+export const getData = (filepath) => fs.readFileSync(path.resolve(process.cwd(), '__fixtures__', filepath), 'utf-8');
+export const getObject = (filepath) => JSON.parse(getData(filepath));
 
 const genDiffData = (filepath1, filepath2) => {
   const obj1 = getObject(filepath1);

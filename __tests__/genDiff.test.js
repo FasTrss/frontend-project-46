@@ -1,10 +1,10 @@
 import { test, expect } from '@jest/globals';
-import path from 'path';
-import genDiff, { __dirname } from '../src/index.js';
+import genDiff, { getAbsolutePath } from '../src/index.js';
 
 test('genDiff on file1, file2', () => {
-  const filepath1 = path.join(__dirname, '__fixtures__', 'file1.json');
-  const filepath2 = path.join(__dirname, '__fixtures__', 'file2.json');
+  const filepath1 = getAbsolutePath('file1.JSON');
+  console.log(filepath1);
+  const filepath2 = getAbsolutePath('file2.JSON');
   const check = genDiff(filepath1, filepath2);
   const resultString = `{
  - follow:false

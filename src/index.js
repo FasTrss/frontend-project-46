@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 export const __dirname = dirname(__filename);
-export const getAbsolutePath = (filepath) => path.resolve(__dirname, '../..', '__fixtures__', filepath);
+export const getAbsolutePath = (filepath) => path.resolve(__dirname, '..', '__fixtures__', filepath);
 export const readFile = (filepath) => fs.readFileSync(getAbsolutePath(filepath), 'utf-8');
 export const getObject = (filepath) => JSON.parse(readFile(filepath));
 

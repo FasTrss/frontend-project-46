@@ -1,10 +1,5 @@
 import { test, expect } from '@jest/globals';
-import path, { dirname } from 'path';
-import { fileURLToPath } from 'url';
-import genDiff, { getData } from '../src/index.js';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import genDiff from '../src/index.js';
 
 test('genDiff on file1, file2', () => {
   const resultString = `{

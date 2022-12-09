@@ -11,7 +11,7 @@
     "bin": {
         "gendiff": "bin/gendiff.js"
     },
-    "script": {
+    "scripts": {
         "test": "npx jest",
         "test:coverage": "npx jest --coverage"
     },

@@ -9,3 +9,5 @@ https://asciinema.org/a/UCpnAg7IAQV2K4kNCTIJ7rXiu
 
 # Test Coverage CodeClimate
 <a href="https://codeclimate.com/github/FasTrss/frontend-project-46/test_coverage"><img src="https://api.codeclimate.com/v1/badges/440f327b69cfec772aef/test_coverage" /></a>
+
+[![project-check](https://github.com/FasTrss/frontend-project-46/actions/workflows/gendiff-check.yml/badge.svg)](https://github.com/FasTrss/frontend-project-46/actions/workflows/gendiff-check.yml)

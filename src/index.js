@@ -72,6 +72,4 @@ const genDiff = (filepath1, filepath2) => {
   return getFormattedDiff(data);
 };
 
-console.log(getData('file2.JSON'));
-
 export default genDiff;

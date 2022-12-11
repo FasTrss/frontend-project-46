@@ -21,3 +21,17 @@ test('genDiff on file1, file2', () => {
 }`;
   expect(genDiff(file1, file2)).toEqual(resultString);
 });
+
+test('genDiff yml on file1, file2', () => {
+  const file1 = getFixturePath('filepath1.yml');
+  const file2 = getFixturePath('filepath2.yml');
+  const resultString = `{
+   - follow:false
+     host:hexlet.io
+   - proxy:123.234.53.22
+   - timeout:50 
+   + timeout:20
+   + verbose:true
+  }`;
+  expect(genDiff(file1, file2)).toEqual(resultString);
+});

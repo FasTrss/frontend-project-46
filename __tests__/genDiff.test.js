@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 
-test('genDiff on file1, file2', () => {
+test('genDiff json on file1, file2', () => {
   const file1 = getFixturePath('file1.json');
   const file2 = getFixturePath('file2.json');
   const resultString = `{
@@ -22,7 +22,7 @@ test('genDiff on file1, file2', () => {
   expect(genDiff(file1, file2)).toEqual(resultString);
 });
 
-test('genDiff yml on file1, file2', () => {
+test('genDiff yml on filepath1, filepath2', () => {
   const file1 = getFixturePath('filepath1.yml');
   const file2 = getFixturePath('filepath2.yml');
   const resultString = `{

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const getDiff = (file1, file2, format) => {
+export const getDiff = (file1, file2) => {
   const keys1 = Object.keys(file1);
   const keys2 = Object.keys(file2);
   const uniq = _.uniq([...keys1, ...keys2]);
@@ -39,7 +39,7 @@ const getDiff = (file1, file2, format) => {
   return result;
 };
 
-const getFormattedDiff = (diffData) => {
+export const getFormattedDiff = (diffData) => {
   const result = diffData.map((diff) => {
     const typeofDiff = diff.type;
     switch (typeofDiff) {

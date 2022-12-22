@@ -1,4 +1,5 @@
 import { test, expect } from '@jest/globals';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import genDiff from '../src/index.js';
@@ -8,30 +9,9 @@ const __dirname = path.dirname(__filename);
 
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 
-test('genDiff json on file1, file2', () => {
+test('genDiff on file1, file2', () => {
   const file1 = getFixturePath('file1.json');
   const file2 = getFixturePath('file2.json');
-  const resultString = `{
- - follow:false
-   host:hexlet.io
- - proxy:123.234.53.22
- - timeout:50 
- + timeout:20
- + verbose:true
-}`;
-  expect(genDiff(file1, file2)).toEqual(resultString);
-});
-
-test('genDiff yml on filepath1, filepath2', () => {
-  const file1 = getFixturePath('filepath1.yml');
-  const file2 = getFixturePath('filepath2.yml');
-  const resultString = `{
- - follow:false
-   host:hexlet.io
- - proxy:123.234.53.22
- - timeout:50 
- + timeout:20
- + verbose:true
-}`;
+  const resultString = fs.readFileSync(getFixturePath('stylishResult.txt'), 'utf-8');
   expect(genDiff(file1, file2)).toEqual(resultString);
 });

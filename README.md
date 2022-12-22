@@ -14,3 +14,6 @@ https://asciinema.org/a/UCpnAg7IAQV2K4kNCTIJ7rXiu
 
 # Работа genDiff на файлах filepath1.yml и filepath2.yml
 https://asciinema.org/a/mtwbMe8DmZTG7DHrVZiYdlfvt
+
+# Работа genDiff на файлах с вложенной структурой и форматом 'stylish'
+https://asciinema.org/a/g8ivjbjLVSI5brFDeKkO9viga

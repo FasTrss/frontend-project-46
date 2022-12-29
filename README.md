@@ -17,3 +17,6 @@ https://asciinema.org/a/mtwbMe8DmZTG7DHrVZiYdlfvt
 
 # Работа genDiff на файлах с вложенной структурой и форматом 'stylish'
 https://asciinema.org/a/g8ivjbjLVSI5brFDeKkO9viga
+
+# Работа genDiff на файлах с вложенной структурой и форматом 'plain'
+https://asciinema.org/a/08rMPopoONfHYOXyJomnhIefh

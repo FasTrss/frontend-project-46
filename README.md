@@ -20,3 +20,6 @@ https://asciinema.org/a/g8ivjbjLVSI5brFDeKkO9viga
 
 # Работа genDiff на файлах с вложенной структурой и форматом 'plain'
 https://asciinema.org/a/08rMPopoONfHYOXyJomnhIefh
+
+# Работа genDiff на файлах с вложенной структурой и форматом 'json'
+https://asciinema.org/a/V5koZrIbfaxHb2mjGKWplKc7k

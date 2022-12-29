@@ -22,3 +22,10 @@ test('genDiff plain', () => {
   const resultString = fs.readFileSync(getFixturePath('plainResult.txt'), 'utf-8');
   expect(genDiff(file1, file2, 'plain')).toEqual(resultString);
 });
+
+test('genDiff json', () => {
+  const file1 = getFixturePath('file1.json');
+  const file2 = getFixturePath('file2.json');
+  const resultString = fs.readFileSync(getFixturePath('jsonResult.txt'), 'utf-8');
+  expect(genDiff(file1, file2, 'json')).toEqual(resultString);
+});

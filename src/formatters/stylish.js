@@ -40,7 +40,7 @@ const stylish = (data, depth = 1) => {
           `${currentIndent}- ${line.key}: ${getString(line.value1, depth + 2)}`,
           `${currentIndent}+ ${line.key}: ${getString(line.value2, depth + 2)}`];
       default:
-        return `${currentIndent}  ${line.key}: ${getString(line.value, depth + 2)}`;
+        return `${currentIndent}  ${line.key}: ${getString(line.value1, depth + 2)}`;
     }
   });
   return [

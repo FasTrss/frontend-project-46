@@ -1,8 +1,8 @@
 import path from 'path';
 import fs from 'fs';
-import getParser from './parsers.js';
-import getDiff from './getDiff.js';
-import getFormattedDiff from './formatters/index.js';
+import getParser from './src/parsers.js';
+import getDiff from './src/getDiff.js';
+import getFormattedDiff from './src/formatters/index.js';
 
 export const getData = (filepath) => fs.readFileSync(path.resolve(process.cwd(), '__fixtures__', filepath), 'utf-8');
 export const getExtension = (filepath) => path.extname(filepath);

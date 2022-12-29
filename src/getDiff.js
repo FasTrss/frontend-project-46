@@ -38,7 +38,7 @@ const getDiff = (file1, file2) => {
     return {
       type: 'unchanged',
       key,
-      value: value1,
+      value1,
     };
   });
   return result;

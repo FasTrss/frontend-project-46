@@ -9,9 +9,16 @@ const __dirname = path.dirname(__filename);
 
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 
-test('genDiff on file1, file2', () => {
+test('genDiff stylish', () => {
   const file1 = getFixturePath('file1.json');
   const file2 = getFixturePath('file2.json');
   const resultString = fs.readFileSync(getFixturePath('stylishResult.txt'), 'utf-8');
   expect(genDiff(file1, file2)).toEqual(resultString);
+});
+
+test('genDiff plain', () => {
+  const file1 = getFixturePath('file1.json');
+  const file2 = getFixturePath('file2.json');
+  const resultString = fs.readFileSync(getFixturePath('plainResult.txt'), 'utf-8');
+  expect(genDiff(file1, file2, 'plain')).toEqual(resultString);
 });

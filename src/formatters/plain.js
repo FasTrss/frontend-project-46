@@ -4,6 +4,9 @@ const getString = (currentValue) => {
   if (_.isObject(currentValue)) {
     return '[complex value]';
   }
+  if (typeof currentValue === 'string') {
+    return `'${currentValue}'`;
+  }
   return currentValue;
 };
 

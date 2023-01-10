@@ -4,10 +4,6 @@
     "description": "(This utility for evaluating the difference in two files)",
     "main": "index.js",
     "type": "module",
-    "transform": {
-        "\\.[jt]sx?$": "babel-jest",
-        "\\.css$": "some-css-transformer"
-    },
     "bin": {
         "gendiff": "bin/gendiff.js"
     },

@@ -4,7 +4,7 @@ import getParser from './src/parsers.js';
 import getDiff from './src/getDiff.js';
 import getFormattedDiff from './src/formatters/index.js';
 
-export const getData = (filepath) => fs.readFileSync(path.resolve(process.cwd(), '__fixtures__', filepath), 'utf-8');
+export const getData = (filepath) => fs.readFileSync(path.resolve(process.cwd(), filepath), 'utf-8');
 export const getExtension = (filepath) => path.extname(filepath);
 
 const genDiff = (filepath1, filepath2, format = 'stylish') => {

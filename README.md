@@ -4,9 +4,9 @@
 
 [![project-check](https://github.com/FasTrss/frontend-project-46/actions/workflows/gendiff-check.yml/badge.svg)](https://github.com/FasTrss/frontend-project-46/actions/workflows/gendiff-check.yml)
 
-## Описание
+# Описание
 Вычислитель отличий – программа, определяющая разницу между двумя структурами данных. Она поддерживает входные форматы yaml и json, и генерирует отчет в виде plain text, json, stylish.
-# Минимальные системные требования
+## Минимальные системные требования
 macOS 12.1 NodeJS v18.11.0
 ## Установка и запуск
  make install
@@ -14,21 +14,21 @@ macOS 12.1 NodeJS v18.11.0
  npm link
 
  gendiff --format (выбираете нужный формат: plain, json либо stylish по умолчанию) path/to/file1.json path/to/file2.yml
- 
+
  Показать справку: gendiff -h
 
 
-# Работа genDiff на файлах file1.JSON и file2.JSON
+### Работа genDiff на файлах file1.JSON и file2.JSON
 https://asciinema.org/a/UCpnAg7IAQV2K4kNCTIJ7rXiu
 
-# Работа genDiff на файлах filepath1.yml и filepath2.yml
+### Работа genDiff на файлах filepath1.yml и filepath2.yml
 https://asciinema.org/a/mtwbMe8DmZTG7DHrVZiYdlfvt
 
-# Работа genDiff на файлах с вложенной структурой и форматом 'stylish'
+### Работа genDiff на файлах с вложенной структурой и форматом 'stylish'
 https://asciinema.org/a/g8ivjbjLVSI5brFDeKkO9viga
 
-# Работа genDiff на файлах с вложенной структурой и форматом 'plain'
+### Работа genDiff на файлах с вложенной структурой и форматом 'plain'
 https://asciinema.org/a/08rMPopoONfHYOXyJomnhIefh
 
-# Работа genDiff на файлах с вложенной структурой и форматом 'json'..
+### Работа genDiff на файлах с вложенной структурой и форматом 'json'..
 https://asciinema.org/a/V5koZrIbfaxHb2mjGKWplKc7k

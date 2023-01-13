@@ -1,9 +1,9 @@
 import _ from 'lodash';
 
 const spacesCount = 2;
-const currentIndentforString = (x) => ' '.repeat(x + spacesCount);
-const currentIndent = (x) => ' '.repeat(x);
-const bracketIndent = (x) => ' '.repeat(x - spacesCount);
+const currentIndentforString = (indentSize) => ' '.repeat(indentSize + spacesCount);
+const currentIndent = (indentSize) => ' '.repeat(indentSize);
+const bracketIndent = (indentSize) => ' '.repeat(indentSize - spacesCount);
 
 const getString = (currentValue, depth = 1) => {
   const indentSize = depth * spacesCount;

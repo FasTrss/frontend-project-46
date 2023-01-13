@@ -4,15 +4,18 @@
 
 [![project-check](https://github.com/FasTrss/frontend-project-46/actions/workflows/gendiff-check.yml/badge.svg)](https://github.com/FasTrss/frontend-project-46/actions/workflows/gendiff-check.yml)
 
+## Описание
+Вычислитель отличий – программа, определяющая разницу между двумя структурами данных. Она поддерживает входные форматы yaml и json, и генерирует отчет в виде plain text, json, stylish.
 # Минимальные системные требования
 macOS 12.1 NodeJS v18.11.0
-
-# Описание
-Вычислитель отличий – программа, определяющая разницу между двумя структурами данных. Она поддерживает входные форматы yaml и json, и генерирует отчет в виде plain text, json, stylish by default.
-# Установка и запуск
+## Установка и запуск
  make install
+
  npm link
- gendiff --format (выбираете нужный формат: plain json либо stylish по умолчанию) path/to/file1.json path/to/file2.yml
+
+ gendiff --format (выбираете нужный формат: plain, json либо stylish по умолчанию) path/to/file1.json path/to/file2.yml
+ 
+ Показать справку: gendiff -h
 
 
 # Работа genDiff на файлах file1.JSON и file2.JSON

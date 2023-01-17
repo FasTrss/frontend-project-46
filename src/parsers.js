@@ -1,6 +1,6 @@
 import yaml from 'js-yaml';
 
-const getParser = (data, format) => {
+const parseData = (data, format) => {
   switch (format) {
     case '.json':
       return JSON.parse(data);
@@ -12,4 +12,4 @@ const getParser = (data, format) => {
   }
 };
 
-export default getParser;
+export default parseData;

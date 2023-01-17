@@ -7,17 +7,20 @@ const getString = (currentValue) => {
   if (typeof currentValue === 'string') {
     return `'${currentValue}'`;
   }
-  return currentValue;
+  if (currentValue === null) {
+    return 'null';
+  }
+  return _.toString(currentValue);
 };
 
 const keyPath = (path, item) => (path === '' ? `${item.key}` : `${path}.${item.key}`);
 
-const plain = (data, path = '') => {
+const getPlainData = (data, path = '') => {
   const lines = (acc, item) => {
     const key = keyPath(path, item);
     switch (item.type) {
       case 'nested':
-        return [...acc, `${plain(item.children, key)}`];
+        return [...acc, `${getPlainData(item.children, key)}`];
       case 'added':
         return [...acc, `Property '${key}' was added with value: ${getString(item.value2)}`];
       case 'removed':
@@ -31,4 +34,4 @@ const plain = (data, path = '') => {
   return data.reduce(lines, []).join('\n');
 };
 
-export default plain;
+export default getPlainData;

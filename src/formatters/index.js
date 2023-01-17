@@ -1,12 +1,12 @@
-import plain from './plain.js';
-import stylish from './stylish.js';
+import getPlainData from './plain.js';
+import getStylishData from './stylish.js';
 
 const getFormattedDiff = (data, format) => {
   switch (format) {
     case 'stylish':
-      return stylish(data);
+      return getStylishData(data);
     case 'plain':
-      return plain(data);
+      return getPlainData(data);
     case 'json':
       return JSON.stringify(data);
     default:

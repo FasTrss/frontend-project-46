@@ -22,12 +22,12 @@ const getString = (currentValue, depth = 1) => {
   ].join('\n');
 };
 
-const stylish = (data, depth = 1) => {
+const getStylishData = (data, depth = 1) => {
   const indentSize = depth * spacesCount;
   const lines = data.flatMap((line) => {
     switch (line.type) {
       case 'nested':
-        return `${' '.repeat(indentSize + 1)} ${line.key}: ${stylish(line.children, depth + 2)}`;
+        return `${' '.repeat(indentSize + 1)} ${line.key}: ${getStylishData(line.children, depth + 2)}`;
       case 'added':
         return `${currentIndent(indentSize)}+ ${line.key}: ${getString(line.value2, depth + 2)}`;
       case 'removed':
@@ -36,8 +36,10 @@ const stylish = (data, depth = 1) => {
         return [
           `${currentIndent(indentSize)}- ${line.key}: ${getString(line.value1, depth + 2)}`,
           `${currentIndent(indentSize)}+ ${line.key}: ${getString(line.value2, depth + 2)}`];
-      default:
+      case 'unchanged':
         return `${currentIndent(indentSize)}  ${line.key}: ${getString(line.value1, depth + 2)}`;
+      default:
+        throw new Error(`Unknown type of data - ${line.type}`);
     }
   });
   return [
@@ -47,4 +49,4 @@ const stylish = (data, depth = 1) => {
   ].join('\n');
 };
 
-export default stylish;
+export default getStylishData;
